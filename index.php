@@ -83,3 +83,33 @@ echo "<br>11<br>";
 
 $newTest = "je recherche la presence de test";
 
+if(strpos($newTest, "test")){
+    echo  strpos($newTest, "test")."test trouvé";
+}
+else{
+    echo "no test";
+};
+
+echo "<br>12<br>";
+
+$ref = strpos($newTest, "test");
+
+if($ref){
+    echo "test trouvé";
+    if($ref === 0){
+        echo " au début de la chaine";
+    }
+    else{
+        echo " dans la chaine à la position ".strpos($newTest, "test");
+    }
+}
+else{
+    echo "no test";
+};
+
+echo "<br>13<br>";
+
+$rvref = strrpos($newTest, "test", -1);
+
+echo "result : ".$rvref;
+
